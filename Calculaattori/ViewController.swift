@@ -32,86 +32,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-/*
-    func numberPushed(number : Int){
-        calculation += String(number)
-    }
-    
-    func operationPushed(givenOperation : String){
-        
-        //add "." only if calculation doesnt contain it already
-        if (givenOperation == ".") && (!calculation.contains(".")){
-            calculation += "."
-        }
-        else if givenOperation != "="{
-            input1 = calculation
-            calculation = ""
-            operation = givenOperation
-        }
-        else{
-            calculate()
-        }
-        
-    }
-    
 
-    func calculate(){
-        switch operation{
-        case "*":
-            calculation = String(Double(input1)! * Double(calculation)!)
-        case "+":
-            calculation = String(Double(input1)! + Double(calculation)!)
-        case "-":
-            calculation = String(Double(input1)! - Double(calculation)!)
-        case "/":
-            calculation = String(Double(input1)! / Double(calculation)!)
-        default:
-            break
-        }
-        
-    }
- */
-    /*https://stackoverflow.com/questions/37870701/how-to-use-one-ibaction-for-multiple-buttons-in-swift*/
     @IBAction func numberButton(_ sender: UIButton) {
-     /*
-        if (sender.tag >= 0) && (sender.tag <= 9){
-            numberPushed(number: sender.tag)
-        }
-        else{
-            switch sender.tag{
-                
-            case -1:// *
-                operation = "*"
-                operationPushed(givenOperation: operation)
-            case -2:// C
-                operation = ""
-                operationPushed(givenOperation: operation)
-            case -3:// +
-                operation = "+"
-                operationPushed(givenOperation: operation)
-            case -4:// -
-                operation = "-"
-                operationPushed(givenOperation: operation)
-            case -5:// /
-                operation = "/"
-                operationPushed(givenOperation: operation)
-            case -6:// .
-                operation = "."
-                operationPushed(givenOperation: operation)
-                
-            case -7:// =
-                calculate()
-                
-            default:
-                break
-            }
-            
-        }
-        
- 
-    */
-        
-     //----------------------------------------------
         
         switch sender.tag{
             
@@ -149,7 +71,6 @@ class ViewController: UIViewController {
            
             
         case -7:// =
-            /*https://stackoverflow.com/questions/26719180/swift-resolving-a-math-operation-in-a-string*/
             
             switch operation{
             case "*":
